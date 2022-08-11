@@ -1,7 +1,7 @@
 const timer = document.getElementById('status');
 let time = new Date;
 time = time.setHours(0, 0, 5);
-interval = setInterval ( () => {
+let interval = setInterval ( () => {
     time = time - 1000;
     timeCounter = new Date(time);
     let hours = settingTheTime(timeCounter.getHours());
