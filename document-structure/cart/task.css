@@ -89,3 +89,24 @@ body {
 .product-shadow {
   position: absolute;
 }
+
+
+.product__image_animation {
+  width: 100px;
+  object-fit: contain;
+  position:absolute;
+  display:block;
+}
+
+.product__image_animation_a {
+  position: absolute;
+  animation-name: translating;
+  animation-duration:  10s;
+  animation-timing-function:  linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes translating {
+	0%{top:0px;left:0px;}
+	100%{top: 80%;left:80%;}
+}
