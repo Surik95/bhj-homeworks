@@ -1,15 +1,13 @@
-const reveal = document.querySelector('.reveal');
+const arrReveal = [...document.querySelectorAll('.reveal')];
 
 document.addEventListener('DOMContentLoaded', revealActive);
 
 window.addEventListener('scroll', revealActive);
 
 function revealActive() {
-  console.log(
-    reveal.getBoundingClientRect().bottom,
-    reveal.getBoundingClientRect().top
-  );
-  if (reveal.getBoundingClientRect().bottom <= 600) {
-    reveal.classList.add('reveal_active');
+  for (let elem of arrReveal) {
+    if (elem.getBoundingClientRect().bottom <= 600) {
+      elem.classList.add('reveal_active');
+    }
   }
 }

@@ -9,3 +9,15 @@ body {
 .poll__title {
   margin-bottom: 20px;
 }
+
+.button-next {
+  background-color: white;
+  border-color: blue;
+  border-radius: 10px;
+  color: blue;
+  margin-top: 15px;
+}
+
+.button-next:hover {
+  color: white;
+}

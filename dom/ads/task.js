@@ -18,7 +18,6 @@ function rotator() {
     rotatorCase[counter].classList.add('rotator__case_active');
   }
   time = rotatorCase[counter].dataset.speed;
-  clearInterval(interval);
   counter === rotatorCase.length - 1 ? (counter = 0) : (counter += 1);
-  interval = setInterval(rotator, time);
+  interval = setTimeout(rotator, time);
 }

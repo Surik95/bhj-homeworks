@@ -120,21 +120,24 @@ function animation(elementTo, elementFrom, elementParent) {
   divAnimation.style.top = distanceYTo + window.scrollY + 'px';
   divAnimation.style.left = distanceXTo + window.scrollX + 'px';
 
-  let showTime = 20 * window.devicePixelRatio;
+  let showTime = 20 / window.devicePixelRatio;
 
   let stepY = referenceY / showTime;
   let stepX = referenceX / showTime;
 
   let interval = setInterval(() => {
-    if (divAnimation.getBoundingClientRect().x + stepX >= distanceXFrom) {
+    if (
+      Math.abs(divAnimation.getBoundingClientRect().x + stepX) >=
+      Math.abs(distanceXFrom)
+    ) {
       clearInterval(interval);
       divAnimation.remove();
       elementParent.style.opacity = 100;
       saveBasket(cartProducts);
       return;
     } else if (
-      divAnimation.getBoundingClientRect().y + stepY <=
-      distanceYFrom
+      Math.abs(divAnimation.getBoundingClientRect().y) + stepY <=
+      Math.abs(distanceYFrom)
     ) {
       divAnimation.remove();
       clearInterval(interval);
