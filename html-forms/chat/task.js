@@ -20,7 +20,7 @@ chatInput.addEventListener('blur', () => {
 
 chatInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && e.currentTarget.value.trim() === '') {
-    clearTimeout(timeoutIndex);
+    clearInterval(intervalIndex);
     e.currentTarget.value = e.currentTarget.defaultValue;
     intervalIndex = intervalFunc();
   } else if (e.key === 'Enter') {
