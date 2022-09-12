@@ -19,7 +19,4 @@ function saveText(keyname, value) {
 
 function enterText(keyname, element) {
   let cash = localStorage.getItem(keyname);
-  if (cash) {
-    element.value = cash;
-  }
 }

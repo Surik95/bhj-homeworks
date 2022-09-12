@@ -16,6 +16,11 @@ chatInput.addEventListener('focus', () => {
 
 chatInput.addEventListener('blur', () => {
   clearInterval(intervalIndex);
+  console.log(2);
+});
+
+chatInput.addEventListener('change', () => {
+  console.log(1);
 });
 
 chatInput.addEventListener('keydown', (e) => {
